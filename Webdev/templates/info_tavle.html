@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+<title>{{ tittel }}</title>
+{% endblock %}
+
+
+{% block body %}
+
+<h1>Oppslagstavla</h1>
+
+{% for i,j in zip(num,words) %}
+<a href = "http://localhost:5000/kategori/{{ i }}"> {{ j }}</a>
+{% endfor %}
+<ul>
+    {% for item in users %}
+    <li>>{{ item[0] }} <br> Publisert Dato:{{ item[1] }} <br> Publisert av:{{ item[2] }} <br>  Antall visninger:{{ item[3] }} <br> </li>
+    {% endfor %}
+
+</ul>
+
+</a>
+
+{% endblock %}
+
+

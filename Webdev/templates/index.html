@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+{% if kapitell %}
+<title>Kapittel {{ kapitell }}</title>
+{% else %}}
+<title>Start page</title>
+{% endif %}}
+{% endblock %}
+
+
+{% block body %}
+
+<h1>Oppslagstavla</h1>
+
+{% for i,j in zip(num,words) %}
+<a href = "http://localhost:5000/kategori/{{ i }}"> {{ j }}</a>
+{% endfor %}
+<ul>
+    {% for item in users %}
+    <a href = "http://localhost:5000/kategori/id/{{ item[3] }}"><li>>{{ item[0] }} <br> {{ item[1] }} <br> {{ item[2] }} <br> </li> </a>
+    {% endfor %}
+
+</ul>
+
+</a>
+
+{% endblock %}
+
+
